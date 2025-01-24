@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        var name="welcome to hefshine software";
+        var arr=name.split(" ");
+        for(var i of arr){
+            document.write(i+"<br>")
+        }
+        document.write("reverse String is: "+arr.reverse().join(" "));
+
+
+        var str1="i love my india";
+        document.write("<br>substring is:-  "+str1.slice(1,7));
+
+        var str2="Color red is more brighter than color blue";
+        document.write("<br> after replace str2 with paint:- "+str2.replace("color","Paint"));
+        document.write("<br> after replace str2 with paint using /color/i  :- "+str2.replace(/color/i,"Paint"));
+        document.write("<br> after replace str2 with paint using /color/ig :- "+str2.replace(/color/ig,"Paint"));
+
+        document.write("<br> index of function: "+str1.indexOf("l"));
+        document.write("<br> last index of function: "+str1.lastIndexOf("i"));
+        document.write("<br> word is present in string: "+str1.includes("love"))
+
+
+
+
+
+    </script>
+</body>
+</html>

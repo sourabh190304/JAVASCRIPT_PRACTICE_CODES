@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <h1 id="demo">hi welcome to hefshine software</h1>
+    <p class="c1">this is example of getclassname property</p>
+    <marquee class="c1">welcome to JS session </marquee>
+
+
+    <h2 id="result"></h2>
+    <script>
+var ele=document.getElementById("demo");
+ele.style.color="red";
+ele.style.backgroundColor="pink";
+ele.fontSize="60px";
+
+
+var arr=document.getElementsByClassName("c1");
+arr[0].style.color="violet";
+arr[1].style.color="grey"
+
+
+// var live=new Date();
+// alert(live);
+
+// function greet(){
+//     document.write("hello welcome");
+// }
+
+// setTimeout(greet,5000);
+
+
+function nowtime(){
+    var live=new Date();
+document.getElementById("result").innerHTML=live;
+}
+setInterval(nowtime,1000)
+    </script>
+</body>
+</html>

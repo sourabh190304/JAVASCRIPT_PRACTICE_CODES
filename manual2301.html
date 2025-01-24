@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Mark-Sheet Calculator</h1>
+    <table border="1">
+        <tr>
+            <td>Hindi</td>
+            <td><input type="number" id="hindi" max="100" placeholder="Max: 100"></td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td><input type="number" id="english" max="100" placeholder="Max: 100"></td>
+        </tr>
+        <tr>
+            <td>Maths</td>
+            <td><input type="number" id="maths" max="100" placeholder="Max: 100"></td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td><input type="number" id="science" max="100" placeholder="Max: 100"></td>
+        </tr>
+        <tr>
+            <td>Art</td>
+            <td><input type="number" id="art" max="100" placeholder="Max: 100"></td>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td><input type="number" id="computer" max="100" placeholder="Max: 100"></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td><input type="text" id="total" readonly></td>
+        </tr>
+        <tr>
+            <td>Percentage</td>
+            <td><input type="text" id="percentage" readonly></td>
+        </tr>
+        <tr>
+            <td>Grade</td>
+            <td><input type="text" id="grade" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calculateMarks()">Calculate</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function calculateMarks() {
+            // Get marks from input fields
+            let hindi = parseFloat(document.getElementById("hindi").value) || 0;
+            let english = parseFloat(document.getElementById("english").value) || 0;
+            let maths = parseFloat(document.getElementById("maths").value) || 0;
+            let science = parseFloat(document.getElementById("science").value) || 0;
+            let art = parseFloat(document.getElementById("art").value) || 0;
+            let computer = parseFloat(document.getElementById("computer").value) || 0;
+
+            // Calculate total
+            let total = hindi + english + maths + science + art + computer;
+            document.getElementById("total").value = total;
+
+            // Calculate percentage
+            let percentage = (total / 600) * 100;
+            document.getElementById("percentage").value = percentage.toFixed(2);
+
+            // Determine grade
+            let grade;
+            if (percentage >= 90) {
+                grade = "A+";
+            } else if (percentage >= 80) {
+                grade = "A";
+            } else if (percentage >= 70) {
+                grade = "B+";
+            } else if (percentage >= 60) {
+                grade = "B";
+            } else if (percentage >= 50) {
+                grade = "C";
+            } else {
+                grade = "Fail";
+            }
+            document.getElementById("grade").value = grade;
+        }
+    </script>
+</body>
+</html>

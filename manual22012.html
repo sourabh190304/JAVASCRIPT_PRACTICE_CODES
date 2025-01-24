@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Prime Number Generator</h2>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+      <td>Start</td>
+      <td><input type="number" id="start"></td>
+    </tr>
+    <tr>
+      <td>End</td>
+      <td><input type="number" id="end"></td>
+    </tr>
+    <tr>
+      <td>Prime Numbers</td>
+      <td><textarea id="primes" rows="5" cols="30" readonly></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <button onclick="generatePrimes()">Generate</button>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (var i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    function generatePrimes() {
+      var start = parseInt(document.getElementById('start').value);
+      var end = parseInt(document.getElementById('end').value);
+      var primes = [];
+
+      if (isNaN(start) || isNaN(end) || start > end) {
+        alert('Please enter valid start and end values.');
+        return;
+      }
+
+      for (var i = start; i <= end; i++) {
+        if (isPrime(i)) {
+          primes.push(i);
+        }
+      }
+
+      document.getElementById('primes').value = primes.length ? primes.join(', ') : 'No prime numbers found.';
+    }
+  </script>
+</body>
+</html>

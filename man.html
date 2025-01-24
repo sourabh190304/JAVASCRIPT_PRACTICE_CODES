@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+// 
+
+
+for(let i=0;i<=50;i++){
+    if(i%3==0 && i%5==0){
+        document.write("<br>FizzBuzz");
+    }else if(i%3==0){
+        document.write("<br> fizz")
+    }else if(i%5==0){
+        document.write("<br> Buzz");
+    }else{
+        document.write("<br" +i);
+    }
+}
+
+
+ 
+ function large(a) {
+    let min = a[0];
+    let max = a[0];
+
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+        if (a[i] < min) {
+            min = a[i];
+        }
+    }  
+     return { min, max };
+}
+
+let a = [1, 68, 97, 8, 3, 4, 8];
+let result = large(a);
+document.write("<br> Minimum: " + result.min + "<br>");
+document.write("Maximum: " + result.max);
+
+
+
+
+  function reverse(s) {
+    let rev = "";
+
+     for (let i = s.length - 1; i >= 0; i--) {
+        rev += s[i];
+    }
+    return rev;
+}
+
+let s = "hello";
+let rev = reverse(s);
+if(s==rev){
+    document.write("is palodrome "); 
+
+}else{
+    document.write("not palidrome ")
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>

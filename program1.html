@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo" ></h1>
+    <p id="pdemo">this is para tag</p>
+    <script>
+    document.getElementById("demo").innerHTML="this is inner html example";
+    //var str=document.getElementById("pdemo").innerHTML
+    //alert(str);
+    var student=[1,"sanket","spring",89.90];
+    for(var i=0; i<student.length; i++)
+    {
+        document.write(student[i]+"<br>");
+    }
+    document.write("<br>");
+    document.write("this is for-of loop");
+    document.write("<br>");
+    for(var stud of student){
+        document.write(stud+"<br>");
+    }
+    document.write("<br>");
+    document.write("this is for-in loop");
+    document.write("<br>");
+    for(var stud in student){
+        document.write(student[stud]+"<br>");
+    }
+
+    var employee={"eid":11,"ename":"sanket","esalary":50000,"dept":"IT"}
+    document.write("<br> the name of employee is "+employee.ename)//first methood to print 
+    document.write("<br> the salary of employee is "+employee["esalary"])//second methood to print 
+    document.write("<br> the dept of employee is "+employee["dept"])//second methood to print 
+    document.write("<br> the id of employee is "+employee.eid)//first methood to print 
+
+
+    function add(a, b){
+        document.write("result of addition is "+a+b);
+    }
+
+
+    function swap(num1, num2){
+        var temp=num1;
+        num1=num2;
+        num2=temp;
+        document.write("<br>after swapping num1 "+num1+" num2 is"+num2)
+    }
+
+    swap(10, 20);
+  
+    function factorial1(no)
+    {
+        var fact=1;
+        for(var i=1;i<=no;i++)
+    {
+        fact=fact*i;
+    }
+
+        return fact;
+    }
+     result=factorial1(5);
+    document.write("<br> result"+result);
+
+
+    var greet = function()
+    {
+    //alert("this is my javascript file");
+    }
+    greet();
+
+    var mul = (num1, num2) =>{
+        return num1*num2;
+    }
+    document.write("<br>multiplication is "+mul(10,20))
+
+
+    
+
+    </script>
+</body>
+</html>

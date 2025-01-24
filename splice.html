@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var fruits=["mango","apple","banana","cherry"];
+
+
+    document.write("fruits.splice(0,2,cranberry",",strawberry)");
+    document.write("<br>");
+
+    document.write("<br>before :-")
+    for(var i of fruits){
+    document.write("<br>"+i+" ");
+}
+
+
+document.write("<br>");
+fruits.splice(0,2,"cranberry","strawberry");
+document.write("<br>after :-")
+
+
+for(var i of fruits){
+    document.write("<br>"+i+" ");
+}
+document.write("<br>");
+
+document.write("<br>result of join method:- "+fruits.join(" * "));
+
+document.write("<br>result of toString methood:- "+fruits.toString());
+
+document.write("<br>");
+
+document.write("<br>result of concat methood:-");
+
+var vegies=["potato","tomato","gineger","garlic"];
+var sweet=["rasmalai","rabadi"];
+var res=fruits.concat(vegies,sweet);
+for(var i of res){
+    document.write("<br>"+i);
+}
+    </script>
+</body>
+</html>

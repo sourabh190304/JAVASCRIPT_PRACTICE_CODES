@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Enter the Text</h1>
+    <textarea id="inputText" rows="4" cols="50" placeholder="Type your text here"></textarea>
+    <br>
+    <button onclick="swapCase()">Swap the Case</button>
+    <h2>Output</h2>
+    <p id="output"></p>
+    <script>
+        function swapCase() {
+            // Get the input text
+            let inputText = document.getElementById("inputText").value;
+
+            // Swap the case
+            let swappedText = inputText
+                .split('')
+                .map(char => char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase())
+                .join('');
+
+            // Display the output
+            document.getElementById("output").innerText = swappedText;
+        }
+    </script>
+</body>
+</html>

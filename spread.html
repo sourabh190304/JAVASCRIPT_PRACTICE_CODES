@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var marks=[10,20,30,40,50,60];
+        document.write(...marks+" , "+"<br>")
+        var data=[100,200,...marks];
+        for(var i of data){
+            document.write(i+"<br>");
+        }
+
+        var maxele=Math.max(...marks);
+        document.write("the maximum number is "+maxele);
+
+
+       var s=" hello ";
+        document.write("<br>"+s.length);
+        var x=s.toUpperCase()
+        var y=s.toLowerCase()
+        document.write("<br>"+"uppercase : "+x+" lowercase: "+y);
+
+        var str="    i am the conquerer   ";
+        document.write("<br>str og length: "+str.length)
+        var trimmethod=str.trim()
+        document.write("<br>str after trim length: "+trimmethod.length)
+
+    </script>
+</body>
+</html>

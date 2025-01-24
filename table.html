@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(150, 221, 221);">
+    <form onsubmit="multiply()" style="align-content: center;">
+enter no.1<input type="number" id="no1"><br>
+<input type="submit" value="table of number">
+    </form>
+    <p id="result"></p>
+    <script style="background-color: aqua;">
+var text;
+function multiply(){
+
+    text="";
+    var no=parseInt(document.getElementById("no1").value);
+    for(var i=1; i<=10; i++){
+        text=text+(no*i)+"<br>";
+
+    }
+    document.getElementById("result").innerHTML=text;
+    event.preventDefault();
+}
+
+
+
+
+
+    </script>
+
+
+    </form>
+</body>
+</html>

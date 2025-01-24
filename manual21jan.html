@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var employees = [
+  { name: "Aarav", age: 25, salary: 3000 },
+  { name: "Bhavana", age: 35, salary: 5000 },
+  { name: "Chirag", age: 28, salary: 4000 },
+  { name: "Dev", age: 22, salary: 2500 },
+  { name: "Esha", age: 30, salary: 4500 }
+];
+
+var employeeNames = employees.map(employee => employee.name);
+document.write("Employee Names: " + employeeNames.join(", ") + "<br>");
+
+var olderEmployees = employees.filter(employee => employee.age > 28);
+var formattedEmployees = olderEmployees.map(emp => `${emp.name} (Age: ${emp.age}, Salary: ${emp.salary})`).join(", ");
+document.write("Employees older than 28: " + formattedEmployees + "<br>");
+
+var totalSalary = employees.reduce((sum, employee) => sum + employee.salary, 0);
+document.write("Total Salary: " + totalSalary + "<br>");
+
+var products = [
+  { name: "Laptop", category: "Electronics", price: 800, quantity: 5 },
+  { name: "Chair", category: "Furniture", price: 120, quantity: 10 },
+  { name: "Pen", category: "Stationery", price: 2, quantity: 100 },
+  { name: "Desk", category: "Furniture", price: 200, quantity: 3 },
+  { name: "Headphones", category: "Electronics", price: 150, quantity: 8 }
+];
+
+var productNames = products.map(product => product.name);
+document.write("Product Names: " + productNames.join(", ") + "<br>");
+
+var expensiveProducts = products.filter(product => product.price > 100);
+var formattedProducts = expensiveProducts.map(prod => `${prod.name} (Category: ${prod.category}, Price: ${prod.price}, Quantity: ${prod.quantity})`).join(", ");
+document.write("Products with price > $100: " + formattedProducts + "<br>");
+
+var totalInventoryValue = products.reduce((total, product) => total + (product.price * product.quantity), 0);
+document.write("Total Inventory Value: " + totalInventoryValue + "<br>");
+
+    </script>
+</body>
+</html>

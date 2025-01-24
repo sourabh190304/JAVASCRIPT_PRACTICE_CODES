@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h2 style="align-content: center;">Example of change</h2>
+<body style="background-color: rgb(239, 191, 191);">
+    <div style="background-color: rgb(218, 135, 135);">
+        <br>
+        <sup>SELECT CITY:</sup>
+<select onchange="change(event)" style="color: rgb(203, 67, 67);">
+<option>select city</option>
+<option>pune</option>
+<option>satara</option>
+<option>kolhapur</option>
+
+</select>
+<br>
+<br>
+Enter name:<input type="text" onchange="display2(event)" required="true">
+<br>
+
+<script>
+
+function change(event){
+alert("this place is selected for vacation: "+event.target.value);
+}
+function display2(event)
+{
+    alert("your input is: "+event.target.value);
+}
+</script>
+
+
+
+    </form>
+</div>
+</body>
+</html>

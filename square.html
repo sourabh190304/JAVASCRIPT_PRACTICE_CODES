@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="square1()">
+        Enter no.1<input type="number" id="no1"><br>
+        <input type="submit" value="sqaure">
+            </form>
+            <p id="res"></p>
+
+
+            <script>
+               function square1()
+               {
+                   var no=parseInt(document.getElementById("no1").value);
+                   document.getElementById("res").innerHTML=(no*no);
+                   event.preventDefault();
+               }
+                </script>
+</body>
+</html>

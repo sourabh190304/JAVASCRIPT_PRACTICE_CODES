@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Input array
+    var words = ["apple", "bat", "cat", "elephant","mat"];
+
+    // Filter words longer than 4 characters
+    var filteredWords = words.filter(function(word) {
+      return word.length <= 4;
+    });
+
+    // Output the result
+    console.log(filteredWords); // ["bat", "cat"]
+    document.write("Output: " + JSON.stringify(filteredWords));
+  </script>
+</body>
+</html>
